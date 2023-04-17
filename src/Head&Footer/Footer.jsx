@@ -3,7 +3,7 @@ import {FaFacebook,FaInstagram,FaGithub} from "../../node_modules/react-icons/fa
 const Footer = () => {
   return (
     <>
-      <div className=" sm:pt-10 flex flex-col items-center gap-5 bg-white">
+      <div className=" rounded-t-sm py-5 sm:pt-10 flex flex-col items-center gap-5 bg-white">
         <div className="sm:text-5xl text-2xl flex gap-10">
           <FaFacebook/>
           <FaInstagram/>

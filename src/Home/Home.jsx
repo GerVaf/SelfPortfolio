@@ -23,12 +23,7 @@ const Home = () => {
           </button>
         </div>
 
-        {/* information */}
-        <div className=" pl-2 text-[10px] border-l-2 border-l-[#FF4848]">
-          <p>+95 942 521 2523</p>
-          <p>thantzinmin667@gmail.com</p>
-          <p>Yangon,Tamwe,Myit Thar Nyout</p>
-        </div>
+        
       </div>
     </>
   );

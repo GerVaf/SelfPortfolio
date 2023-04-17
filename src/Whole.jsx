@@ -5,6 +5,8 @@ import About from "./Home/About";
 import Home from "./Home/Home";
 import Projects from "./Home/Projects";
 import Testimonial from "./Home/Testimonial"
+import Blogs from "./Home/Blogs"
+import Contact from "./Home/Contact";
 
 const Whole = () => {
   return (
@@ -22,6 +24,8 @@ const Whole = () => {
           <About />
           <Projects/>
           <Testimonial/>
+          <Blogs/>
+          <Contact/>
         </div>
       </div>
 

@@ -52,11 +52,15 @@ const Testimonial = () => {
     };
   
     return (
+      <>
+      <div className='p-5 text-white'>
+        <h2 className='text-2xl'>-Knowlage</h2>
+        <p className='text-lg ml-5'>Background Knowlage</p>
+      </div>
       <div className="App mb-20">
-        <p className='text-3xl font-bold mb-10'>Testimonial <span className='text-[#A30CFF]'>Review</span> </p>
         <Slider {...settings}>
           {TesData.map((item) => (
-            <div key={item.id} className="card">
+            <div key={item.id} className="card text-black">
               <div className="card-top">
                 <img
                   alt={item.title}
@@ -72,6 +76,7 @@ const Testimonial = () => {
           ))}
         </Slider>
       </div>
+      </>
     );
 };
 
