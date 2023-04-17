@@ -1,8 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import CountUp from "react-countup";
+import ReactTyped from "react-typed";
 import ScrollTrigger from "react-scroll-trigger";
-import Typical from "react-typical";
 import { Data } from "../assets/PresentData";
 const About = () => {
   const [count, setCount] = useState(false);
@@ -57,17 +57,16 @@ const About = () => {
         <div className="text-white mb-5">
           <h2 className="text-2xl font-semibold ">
             <p>ThantZinMin</p>
-            <Typical
-              loop={Infinity}
-              wrapper="b"
-              steps={[
-                "Web Developer",
-                1000,
-                "Front-end",
-                1000,
-                "Back-end",
-                1000,
-              ]}
+            <ReactTyped
+            strings={[
+              "Web Developer",
+              "Front-end",
+              "Back-end"
+            ]}
+            typeSpeed={120}
+            backSpeed={70}
+              loop
+              
             />
           </h2>
           <hr className=" w-20 border-red-500 border-b-2 mb-5" />
