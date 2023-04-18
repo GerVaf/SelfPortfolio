@@ -11,14 +11,15 @@ import Contact from "./Home/Contact";
 const Whole = () => {
   return (
     <>
-      <div className="sm:flex">
-        <div className=" sm:w-1/5">
+      <div className="sm:relative w-[100%]">
+        <div className=" sm:fixed sm:left-0 sm:top-0 sm:w-1/5">
           <Nav />
           <div className="hidden sm:block">
             <Footer />
           </div>
         </div>
 
+        <div className="sm:flex sm:justify-end">
         <div className=" sm:w-4/5">
           <Home />
           <About />
@@ -26,6 +27,7 @@ const Whole = () => {
           <Testimonial/>
           <Blogs/>
           <Contact/>
+        </div>
         </div>
       </div>
 
