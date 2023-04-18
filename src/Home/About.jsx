@@ -83,7 +83,7 @@ const About = () => {
             <h1 className="sm:text-2xl text-lg sm:ml-10 ml-5">Everything About Me</h1>
           </div>
 
-          <div className="sm:flex flex flex-col sm:flex-wrap gap-10">
+          <div className="sm:flex flex flex-col sm:flex-row sm:flex-wrap gap-10">
           {Data.map((card) => {
             return (
               <div
