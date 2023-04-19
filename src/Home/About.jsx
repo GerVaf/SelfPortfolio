@@ -17,13 +17,13 @@ const About = () => {
           <div className=" flex justify-around gap-3 sm:gap-10 sm:justify-center sm:text-[23px] text-[10px] font-semibold sm:mb-24 ">
             <div className="bg-[#BCD1FF] sm:py-7 sm:px-10 py-3 px-3 rounded-sm sm:flex sm:flex-col sm:items-center">
               <h1 className="sm:text-3xl text-xl">
-                {count && <CountUp start={0} end={1} duration={5} delay={1} />}+
+                {count && <CountUp start={0} end={1} duration={5} delay={0.5} />}+
               </h1>
               <h2>YEARS OF EXPERINCES</h2>
             </div>
             <div className="bg-[#FFBCBC] sm:py-7 sm:px-10 py-3 px-3 rounded-sm sm:flex sm:flex-col sm:items-center">
               <h1 className="sm:text-3xl text-xl">
-                {count && <CountUp start={0} end={10} duration={5} delay={1} />}
+                {count && <CountUp start={0} end={10} duration={5} delay={0.5} />}
                 +
               </h1>
               <h2>PROJECT COMPLETED</h2>
@@ -31,7 +31,7 @@ const About = () => {
             <div className="bg-[#FFD9B6] sm:py-7 sm:px-10 py-3 px-3 rounded-sm sm:flex sm:flex-col sm:items-center">
               <h1 className="sm:text-3xl text-xl">
                 {count && (
-                  <CountUp start={0} end={100} duration={5} delay={1} />
+                  <CountUp start={0} end={100} duration={5} delay={0.5} />
                 )}
                 +
               </h1>

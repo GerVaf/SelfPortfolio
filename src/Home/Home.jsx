@@ -1,7 +1,5 @@
 import React from "react";
-import animation from "../assets/img/genius.gif"
-import animation2 from "../assets/img/animation11.gif"
-import animation3 from '../assets/img/animation22.gif'
+
 const Home = () => {
   return (
     <>
@@ -28,12 +26,8 @@ const Home = () => {
               Hire Now
             </button>
           </div>
-          <img className="sm:hidden" src={animation} alt="" />
-          <img src={animation2} className='sm:hidden absolute top-0 z-[-1] w-[100%]' alt="" />
           <div className=" relative sm:hidden items-center flex justify-center">
-          <img src={animation3} 
-          className='sm:hidden absolute bottom-[-50px] w-36'
-          alt="" />
+          
           </div>
         </div>
       </div>
