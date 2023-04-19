@@ -7,7 +7,9 @@ import Projects from "./Home/Projects";
 import Testimonial from "./Home/Testimonial"
 import Blogs from "./Home/Blogs"
 import Contact from "./Home/Contact";
-
+// decoration 
+import animation from './assets/img/genius.gif'
+import animation2 from './assets/img/animation2.gif'
 const Whole = () => {
   return (
     <>
@@ -18,8 +20,10 @@ const Whole = () => {
             <Footer />
           </div>
         </div>
+        
+        <img className="hidden sm:block sm:right-0 sm:z-[-1] sm:absolute" src={animation} alt="" />
 
-        <div className="sm:flex sm:justify-end">
+        <div className="sm:flex sm:z-10 sm:justify-end">
         <div className=" sm:w-4/5">
           <Home />
           <About />
