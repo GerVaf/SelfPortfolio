@@ -5,17 +5,17 @@ import { BiLink } from "../../node_modules/react-icons/bi";
 const Projects = () => {
   return (
     <>
-    <div className="p-5 text-white">
-      <h2 className="sm:text-4xl text-2xl sm:mb-2 ">-Projects</h2>
-      <p className="sm:text-2xl text-lg sm:ml-10 ml-5">Recent Complete Projects</p>
-    </div>
+      <div className="p-5 text-white">
+        <h2 className="sm:text-4xl text-2xl sm:mb-2 ">-Projects</h2>
+        <p className="sm:text-2xl text-lg sm:ml-10 ml-5">
+          Recent Complete Projects
+        </p>
+      </div>
       <div className="p-5 sm:flex sm:flex-row sm:flex-wrap flex flex-col gap-5 ">
         {ProjectsDisplay.map((pj) => {
           return (
-            <div className="sm:w-2/5 card lg:card-side rounded-sm shadow-xl bg-slate-100 sm:h-[455px] h-[330px]">
-              <figure>
-                <img className="rounded-t-sm" src={pj.img} alt="Album" />
-              </figure>
+            <div className="sm:w-2/5 flex flex-col  bg-slate-100 sm:h-[455px] h-[330px]">
+              <img className="rounded-t-sm object-cover object-top h-2/4" src={pj.img} alt="Album" />
 
               <div className="card-body py-3 px-3">
                 <div className=" flex justify-center ">
@@ -25,18 +25,18 @@ const Projects = () => {
                 </div>
 
                 {/* include */}
-                <div className=" flex gap-5 my-4">
+                <div className="h-[50px] sm:h-[100px]"><div className=" flex gap-5 my-4">
                   {pj.language.map((lang) => {
-                    return <img className=" w-8" src={lang.img} alt="" />;
+                    return <img className="sm:w-16 sm:h-16 w-8 h-8" src={lang.img} alt="" />;
                   })}
-                </div>
+                </div></div>
 
                 <hr className="mb-2 border-gray-400" />
                 {/* link  */}
                 <div className="flex justify-around sm:text-3xl text-2xl text-black">
                   <div className="flex justify-center w-1/4 hover:border-b bg-slate-300 hover:bg-slate-300 hover:border-black hover:transition p-2 ">
                     <a>
-                      <AiFillGithub/>
+                      <AiFillGithub />
                     </a>
                   </div>
                   <div className="flex justify-center w-1/4 hover:border-b bg-slate-300 hover:bg-slate-300 hover:border-black hover:transition p-2 ">

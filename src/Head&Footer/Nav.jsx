@@ -3,8 +3,8 @@ import profile from "../assets/img/profile.jpg";
 const Nav = () => {
   return (
     <>
-      <div className=" py-1 sm:py-0 bg-white ">
-        <div className=" sm:p-10 items-center sm:pt-24 gap-4 sm:flex sm:flex-col flex justify-around">
+      <div className=" sm:h-[75vh] py-1 sm:py-0 bg-white ">
+        <div className="  sm:p-10 items-center sm:pt-24 gap-4 sm:flex sm:flex-col flex justify-around">
           <img
             className="sm:mb-5 w-12 h-12 sm:w-40 sm:h-40 object-cover rounded-[50%]"
             src={profile}
