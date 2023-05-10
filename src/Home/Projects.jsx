@@ -34,12 +34,12 @@ const Projects = () => {
                 <hr className="mb-2 border-gray-400" />
                 {/* link  */}
                 <div className="flex justify-around sm:text-3xl text-2xl text-black">
-                  <div className="flex justify-center w-1/4 hover:border-b bg-slate-300 hover:bg-slate-300 hover:border-black hover:transition p-2 ">
+                  <div className="flex justify-center w-1/4 bg-gradient-to-r from-gray-700 to-zinc-800 hover:from-gray-600 hover:to-zinc-700   rounded-md text-white hover:transition p-2 ">
                     <a>
                       <AiFillGithub />
                     </a>
                   </div>
-                  <div className="flex justify-center w-1/4 hover:border-b bg-slate-300 hover:bg-slate-300 hover:border-black hover:transition p-2 ">
+                  <div className="flex justify-center w-1/4 bg-gradient-to-r from-gray-700 to-zinc-800 hover:from-gray-600 hover:to-zinc-700   rounded-md text-white hover:transition p-2 ">
                     <a href={pj.link}>
                       <BiLink />
                     </a>
