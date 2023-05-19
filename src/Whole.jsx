@@ -9,21 +9,36 @@ import Contact from "./Home/Contact";
 import animation from "./assets/img/genius.gif";
 import profile from "./assets/img/profile.jpg";
 import { Link } from "react-scroll";
-// animation 
+// animation
 import ScrollReveal from "scrollreveal";
 const Whole = () => {
   const [show, setShow] = useState(false);
-  ScrollReveal({distance:'500px'})
-  ScrollReveal().reveal('#home',{delay:300,reset:true,origin:'right',interval:500})
-  ScrollReveal().reveal('#experience',{delay:300,reset:true,origin:'left',interval:500})
-  ScrollReveal().reveal('#projects',{delay:300,reset:true,origin:'right',interval:500})
-  ScrollReveal().reveal('#knowlage',{delay:300,reset:true,origin:'left',interval:500})
-  ScrollReveal().reveal('#connect',{delay:300,reset:true,origin:'right',interval:500})
+  ScrollReveal({ distance: "100px" });
+  ScrollReveal().reveal("#home", {
+    delay: 300,
+    reset: true,
+  });
+  ScrollReveal().reveal("#experience", {
+    delay: 300,
+    reset: true,
+  });
+  ScrollReveal().reveal("#projects", {
+    delay: 300,
+    reset: true,
+  });
+  ScrollReveal().reveal("#knowlage", {
+    delay: 300,
+    reset: true,
+  });
+  ScrollReveal().reveal("#connect", {
+    delay: 300,
+    reset: true,
+  });
 
   console.log(show);
   return (
     <>
-      <div className="sm:relative w-[100%]">
+      <div className="sm:relative w-[100%] overflow-hidden">
         <div className=" hidden sm:block sm:fixed sm:left-0 sm:top-0 sm:w-1/5">
           <div className=" sm:h-[75vh] py-1 sm:py-0 bg-white ">
             {/* navbar for desktop */}
@@ -39,19 +54,44 @@ const Whole = () => {
                 Thant Zin Min
               </h2>
               <div className="sm:flex sm:items-center sm:flex-col hidden text-[10px] font-bold sm:text-[20px] gap-1 sm:gap-5 cursor-pointer">
-                <Link to="home" smooth={true} duration={500}>
+                <Link
+                  className="hover:text-red-600 duration-200 transition"
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                >
                   HOME
                 </Link>
-                <Link to="experience" smooth={true} duration={500}>
+                <Link
+                  className="hover:text-red-600 duration-200 transition"
+                  to="experience"
+                  smooth={true}
+                  duration={500}
+                >
                   EXPERIENCE
                 </Link>
-                <Link to="projects" smooth={true} duration={500}>
+                <Link
+                  className="hover:text-red-600 duration-200 transition"
+                  to="projects"
+                  smooth={true}
+                  duration={500}
+                >
                   PROJECTS
                 </Link>
-                <Link to="knowlage" smooth={true} duration={500}>
+                <Link
+                  className="hover:text-red-600 duration-200 transition"
+                  to="knowlage"
+                  smooth={true}
+                  duration={500}
+                >
                   KNOWLAGE
                 </Link>
-                <Link to="connect" smooth={true} duration={500}>
+                <Link
+                  className="hover:text-red-600 duration-200 transition"
+                  to="connect"
+                  smooth={true}
+                  duration={500}
+                >
                   CONNECT
                 </Link>
               </div>
@@ -104,21 +144,46 @@ const Whole = () => {
             <div
               className={` ${
                 show ? "" : "hidden"
-              } absolute right-0 flex flex-col gap-2 p-5 z-20 rounded-md text-black transition-all mr-4 menucate`}
+              } absolute right-0 flex flex-col gap-2 p-5 z-20 rounded-md text-white transition-all mr-4 menucate`}
             >
-              <Link to="home" smooth={true} duration={400}>
+              <Link
+                className="font-bold hover:text-red-600"
+                to="home"
+                smooth={true}
+                duration={400}
+              >
                 HOME
               </Link>
-              <Link to="experience" smooth={true} duration={400}>
+              <Link
+                className="font-bold hover:text-red-600"
+                to="experience"
+                smooth={true}
+                duration={400}
+              >
                 EXPERIENCE
               </Link>
-              <Link to="projects" smooth={true} duration={400}>
+              <Link
+                className="font-bold hover:text-red-600"
+                to="projects"
+                smooth={true}
+                duration={400}
+              >
                 PROJECTS
               </Link>
-              <Link to="knowlage" smooth={true} duration={400}>
+              <Link
+                className="font-bold hover:text-red-600"
+                to="knowlage"
+                smooth={true}
+                duration={400}
+              >
                 KNOWLAGE
               </Link>
-              <Link to="connect" smooth={true} duration={400}>
+              <Link
+                className="font-bold hover:text-red-600"
+                to="connect"
+                smooth={true}
+                duration={400}
+              >
                 CONNECT
               </Link>
             </div>
@@ -130,7 +195,7 @@ const Whole = () => {
             <div id="experience">
               <About />
             </div>
-            <div  id="projects">
+            <div id="projects">
               <Projects />
             </div>
             <div id="knowlage">
