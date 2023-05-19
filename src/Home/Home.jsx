@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Link } from "react-scroll";
+import Cv from '../assets/img/Cv.pdf'
 const Home = () => {
   return (
     <>
@@ -19,16 +20,18 @@ const Home = () => {
         {/* button */}
         <div className="mb-5 relative">
           <div className="flex gap-4">
-            <button className="rounded-md sm:px-12 px-3 sm:py-4 py-1 bg-[#EC2626] sm:font-semibold sm:text-xl text-white">
-              Download CV
-            </button>
-            <button className="rounded-md sm:px-12 px-3 sm:py-4 py-1 bg-[#EC2626] sm:font-semibold sm:text-xl text-white">
-              Hire Now
-            </button>
+            <a href={Cv} download='ThantZinMin_Cv'>
+              <button className="rounded-md sm:px-12 px-3 sm:py-4 py-1 bg-[#EC2626] sm:font-semibold sm:text-xl text-white">
+                Download CV
+              </button>
+            </a>
+            <Link to="connect" smooth={true} duration={400}>
+              <button className="rounded-md sm:px-12 px-3 sm:py-4 py-1 bg-[#EC2626] sm:font-semibold sm:text-xl text-white">
+                Hire Now
+              </button>
+            </Link>
           </div>
-          <div className=" relative sm:hidden items-center flex justify-center">
-          
-          </div>
+          <div className=" relative sm:hidden items-center flex justify-center"></div>
         </div>
       </div>
     </>

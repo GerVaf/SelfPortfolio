@@ -1,23 +1,62 @@
 import React, { useState } from "react";
 import Footer from "./Head&Footer/Footer";
-import Nav from "./Head&Footer/Nav";
 import About from "./Home/About";
 import Home from "./Home/Home";
 import Projects from "./Home/Projects";
 import Testimonial from "./Home/Testimonial";
-import Blogs from "./Home/Blogs";
 import Contact from "./Home/Contact";
 // decoration
 import animation from "./assets/img/genius.gif";
+import profile from "./assets/img/profile.jpg";
+import { Link } from "react-scroll";
+// animation 
+import ScrollReveal from "scrollreveal";
 const Whole = () => {
-  const [show,setShow] = useState(false)
-  
-  console.log(show)
+  const [show, setShow] = useState(false);
+  ScrollReveal({distance:'500px'})
+  ScrollReveal().reveal('#home',{delay:300,reset:true,origin:'right',interval:500})
+  ScrollReveal().reveal('#experience',{delay:300,reset:true,origin:'left',interval:500})
+  ScrollReveal().reveal('#projects',{delay:300,reset:true,origin:'right',interval:500})
+  ScrollReveal().reveal('#knowlage',{delay:300,reset:true,origin:'left',interval:500})
+  ScrollReveal().reveal('#connect',{delay:300,reset:true,origin:'right',interval:500})
+
+  console.log(show);
   return (
     <>
       <div className="sm:relative w-[100%]">
         <div className=" hidden sm:block sm:fixed sm:left-0 sm:top-0 sm:w-1/5">
-          <Nav />
+          <div className=" sm:h-[75vh] py-1 sm:py-0 bg-white ">
+            {/* navbar for desktop */}
+            <div className="  sm:p-10 items-center sm:pt-24 gap-4 sm:flex sm:flex-col flex justify-around">
+              <img
+                className="sm:mb-5 w-12 h-12 sm:w-40 sm:h-40 object-cover rounded-[20%]"
+                src={profile}
+                alt=""
+              />
+
+              {/* desktop */}
+              <h2 className=" hidden sm:block font-bold sm:text-3xl">
+                Thant Zin Min
+              </h2>
+              <div className="sm:flex sm:items-center sm:flex-col hidden text-[10px] font-bold sm:text-[20px] gap-1 sm:gap-5 cursor-pointer">
+                <Link to="home" smooth={true} duration={500}>
+                  HOME
+                </Link>
+                <Link to="experience" smooth={true} duration={500}>
+                  EXPERIENCE
+                </Link>
+                <Link to="projects" smooth={true} duration={500}>
+                  PROJECTS
+                </Link>
+                <Link to="knowlage" smooth={true} duration={500}>
+                  KNOWLAGE
+                </Link>
+                <Link to="connect" smooth={true} duration={500}>
+                  CONNECT
+                </Link>
+              </div>
+            </div>
+          </div>
           <div className="hidden sm:block">
             <Footer />
           </div>
@@ -31,11 +70,14 @@ const Whole = () => {
 
         <div className="sm:flex sm:z-10 sm:justify-end">
           <div className=" sm:w-4/5">
-
             {/* menubar */}
             <div className="flex justify-end sm:hidden">
               <label className="btn btn-circle swap swap-rotate">
-                <input onClick={()=>setShow(!show)} className="hidden" type="checkbox" />
+                <input
+                  onClick={() => setShow(!show)}
+                  className="hidden"
+                  type="checkbox"
+                />
 
                 <svg
                   className="swap-off fill-current"
@@ -58,20 +100,45 @@ const Whole = () => {
                 </svg>
               </label>
             </div>
-            
-            <div className={` ${show? "" : "hidden"} absolute right-0 flex flex-col gap-2 p-5 z-20 rounded-md text-black transition-all mr-4 menucate`}>
-            <p>HOME</p>
-            <p>EXPERIENCE</p>
-            <p>PROJECTS</p>
-            <p>CONNECT</p>
+            {/* mobile */}
+            <div
+              className={` ${
+                show ? "" : "hidden"
+              } absolute right-0 flex flex-col gap-2 p-5 z-20 rounded-md text-black transition-all mr-4 menucate`}
+            >
+              <Link to="home" smooth={true} duration={400}>
+                HOME
+              </Link>
+              <Link to="experience" smooth={true} duration={400}>
+                EXPERIENCE
+              </Link>
+              <Link to="projects" smooth={true} duration={400}>
+                PROJECTS
+              </Link>
+              <Link to="knowlage" smooth={true} duration={400}>
+                KNOWLAGE
+              </Link>
+              <Link to="connect" smooth={true} duration={400}>
+                CONNECT
+              </Link>
             </div>
 
-            <Home />
-            <About />
-            <Projects />
-            <Testimonial />
-            <Blogs />
-            <Contact />
+            {/* component */}
+            <div id="home">
+              <Home />
+            </div>
+            <div id="experience">
+              <About />
+            </div>
+            <div  id="projects">
+              <Projects />
+            </div>
+            <div id="knowlage">
+              <Testimonial />
+            </div>
+            <div id="connect">
+              <Contact />
+            </div>
           </div>
         </div>
       </div>
