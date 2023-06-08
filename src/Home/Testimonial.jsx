@@ -62,7 +62,6 @@ const Testimonial = () => {
               </div>
               <div className="card-bottom">
                 <h3>{item.text}</h3>
-                <span className="category">{item.title}</span>
               </div>
             </div>
           ))}

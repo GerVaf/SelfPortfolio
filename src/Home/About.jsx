@@ -86,7 +86,7 @@ const About = () => {
                 >
                   <h4>{card.date}Present</h4>
                   <div className=" p-3">
-                    <h2>{card.title}</h2>
+                    <h2 className="font-bold text-red-500">{card.title}</h2>
                     <p>{card.cate}</p>
                   </div>
                 </div>
