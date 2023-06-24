@@ -1,6 +1,6 @@
 import criticalThinking from "./img/thinkin.gif";
 import cleancode from "./img/cleancode.gif";
-import communication from "./img/communication.gif";
+// import communication from "./img/communication.gif";
 import research from "./img/research.gif";
 export const TesData = [
   {
@@ -9,12 +9,12 @@ export const TesData = [
     text: "Clean code is a term used to describe computer programming code that is easy to read, understand, and maintain.",
     title: "CLEAN CODE",
   },
-  {
-    id: 2,
-    img: communication,
-    text: "Effective collaboration with team members, clients, and stakeholders.Clear and concise written and verbal communication.Conflict resolution and facilitating productive discussions.",
-    title: "COMMUNICATION",
-  },
+  // {
+  //   id: 2,
+  //   img: communication,
+  //   text: "Effective collaboration with team members, clients, and stakeholders.Clear and concise written and verbal communication.Conflict resolution and facilitating productive discussions.",
+  //   title: "COMMUNICATION",
+  // },
   {
     id: 3,
     img: criticalThinking,
