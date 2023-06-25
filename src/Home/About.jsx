@@ -14,13 +14,14 @@ const About = () => {
           {/* intro */}
 
           <div className="sm:w-4/5  mb-5">
-            <h2 className="sm:text-3xl text-2xl font-semibold ">
+            <h2 className="sm:text-3xl text-[#FD940A] text-2xl font-semibold ">
               <p>-ThantZinMin</p>
               <ReactTyped
                 strings={["Web Developer", "Front-end", "Back-end"]}
                 typeSpeed={120}
                 backSpeed={70}
                 loop
+                cursorChar="#"
               />
             </h2>
             <hr className="sm:w-36 w-20 border-[#FD940A] border-b-2 mb-5" />
@@ -40,13 +41,13 @@ const About = () => {
         {/* experince */}
         <div className=" flex flex-col gap-5">
           <div className="mb-3 ">
-            <h3 className="sm:text-4xl text-2xl sm:mb-2 ">-Experience</h3>
+            <h3 className="sm:text-4xl text-2xl sm:mb-2 text-[#FD940A] font-bold ">-Experience</h3>
             <h1 className="sm:text-2xl text-lg sm:ml-10 ml-5">
               Everything About Me
             </h1>
           </div>
 
-          <div className="sm:flex flex flex-col sm:flex-row sm:flex-wrap gap-10">
+          <div className="sm:flex flex flex-col sm:justify-center sm:flex-row sm:flex-wrap gap-10">
             {Data.map((card) => {
               return (
                 <div
@@ -55,7 +56,7 @@ const About = () => {
                 >
                   <h4>{card.date}Present</h4>
                   <div className=" p-3">
-                    <h2 className="font-bold text-[#FD940A]">{card.title}</h2>
+                    <h2 className="font-bold text-xl mb-2 text-[#FD940A]">{card.title}</h2>
                     <p>{card.cate}</p>
                   </div>
                 </div>

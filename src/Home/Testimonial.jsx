@@ -46,7 +46,7 @@ const Testimonial = () => {
   return (
     <>
       <div className="p-5 ">
-        <h2 className="sm:text-4xl text-2xl sm:mb-2">-Knowlage</h2>
+        <h2 className="sm:text-4xl text-2xl sm:mb-2 text-[#FD940A] font-bold">-Knowlage</h2>
         <p className="sm:text-2xl text-lg sm:ml-10 ml-5">Background Knowlage</p>
       </div>
 

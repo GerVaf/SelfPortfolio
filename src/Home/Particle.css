@@ -209,6 +209,14 @@
 	animation-duration: 142s;
 	height: 6.59090909%;
 }
+.Cloud.Background:nth-child(2) {
+	animation-duration: 132s;
+	height: 9.59090909%;
+}
+.Cloud.Background:nth-child(2) {
+	animation-duration: 182s;
+	height: 2.59090909%;
+}
 
 .Cloud:nth-child(1) {
 	animation-delay: -18.46153846s;
@@ -221,8 +229,8 @@
 }
 
 .Cloud.Background:nth-child(1) {
-	animation-duration: 146s;
-	height: 7.84090909%;
+	animation-duration: 80s;
+	height: 15.84090909%;
 }
 
 .Cloud {

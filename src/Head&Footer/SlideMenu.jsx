@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import profile from "../assets/img/profile.jpg";
 import Footer from "./Footer";
-import ani from "../assets/img/slide_menu3.gif";
+import ani from "../assets/img/slide_menu.gif";
 // Import ParticleNetworkAnimation component correctly
 import Particle from "../Home/Particle";
 import CountUp from "react-countup";
@@ -32,7 +32,7 @@ const SlideMenu = () => {
             <img className="w-60 h-60 object-cover" src={ani} alt="" />
           </div>
 
-          <div className="flex flex-col gap-3 text-slate-700 ">
+          <div className="flex flex-col gap-3 ">
             <Link
               className="hover:text-[#FD940A] duration-200 transition"
               to="home"
@@ -81,7 +81,7 @@ const SlideMenu = () => {
         >
           <div className=" flex justify-around gap-3 sm:gap-5 sm:justify-center sm:text-[15px] text-white text-[10px] font-semibold ">
             <div className="flex flex-col gap-5">
-              <div className="bg-gradient-to-r to-[#FD940A] from-[#f7d61c] py-3 px-3 rounded-md sm:flex sm:flex-col sm:items-center">
+              <div className="bg-gradient-to-r hover:from-[#fdc40a] hover:to-orange-400 from-[#FD940A] to-orange-500 py-3 px-3 rounded-md sm:flex sm:flex-col sm:items-center">
                 <h1 className="sm:text-lg text-xl">
                   {count && (
                     <CountUp start={0} end={1} duration={5} delay={0.5} />
@@ -90,7 +90,7 @@ const SlideMenu = () => {
                 </h1>
                 <h2>YEARS OF EXPERINCES</h2>
               </div>
-              <div className="bg-gradient-to-r to-[#FD940A] from-[#f7d61c] py-3 px-3 rounded-md sm:flex sm:flex-col sm:items-center">
+              <div className="bg-gradient-to-r hover:from-[#fdc40a] hover:to-orange-400 from-[#FD940A] to-orange-500 py-3 px-3 rounded-md sm:flex sm:flex-col sm:items-center">
                 <h1 className="sm:text-lg text-xl">
                   {count && (
                     <CountUp start={0} end={10} duration={5} delay={0.5} />
@@ -100,7 +100,7 @@ const SlideMenu = () => {
                 <h2>PROJECT COMPLETED</h2>
               </div>
             </div>
-            <div className="bg-gradient-to-r flex justify-center to-[#FD940A] from-[#f7d61c] py-3 px-3 rounded-md sm:flex sm:flex-col sm:items-center">
+            <div className="bg-gradient-to-r hover:from-[#fdc40a] hover:to-orange-400 from-[#FD940A] to-orange-500 flex justify-center py-3 px-3 rounded-md sm:flex sm:flex-col sm:items-center">
               <h1 className="sm:text-lg text-xl">
                 {count && (
                   <CountUp start={0} end={100} duration={5} delay={0.5} />

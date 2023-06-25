@@ -14,6 +14,7 @@ const Particle = () => {
         <div className="Cloud Foreground"></div>
         <div className="Cloud Background"></div>
         <div className="Cloud Background"></div>
+        <div className="Cloud Background"></div>
       </div>
 
       <svg
