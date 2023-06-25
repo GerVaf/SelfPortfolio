@@ -45,7 +45,7 @@ const Testimonial = () => {
 
   return (
     <>
-      <div className="p-5 text-white">
+      <div className="p-5 ">
         <h2 className="sm:text-4xl text-2xl sm:mb-2">-Knowlage</h2>
         <p className="sm:text-2xl text-lg sm:ml-10 ml-5">Background Knowlage</p>
       </div>
@@ -56,7 +56,7 @@ const Testimonial = () => {
             <div key={item.id} className="card text-black">
               <div className="card-top">
                 <div className=" my-3 m-auto w-56">
-                  <img  src={item.img} />
+                  <img src={item.img} />
                 </div>
                 <h1 className=" font-bold text-[#EC2626]">{item.title}</h1>
               </div>

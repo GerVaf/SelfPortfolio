@@ -5,7 +5,7 @@
 
 body{
   font-family: 'Chakra Petch', sans-serif;
-  background-color: #2C2C2B;
+  @apply text-gray-500 bg-slate-200
 }
 .menucate{
   background: rgba(255,255,255,0.5);

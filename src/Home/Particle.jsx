@@ -1,180 +1,46 @@
-import React, { useEffect, useRef } from 'react';
-import '../Home/Particle.css'
-const Particle = ({ parent, x, y }) => {
-  const canvasRef = useRef(null);
-  const { canvas, ctx } = parent;
-  const particleColor = returnRandomArrayitem(parent.options.particleColors);
-  const radius = getLimitedRandom(1.5, 5.5);
-  let opacity = 0;
-
-  const velocity = {
-    x: (Math.random() - 0.5) * parent.options.velocity,
-    y: (Math.random() - 0.5) * parent.options.velocity
-  };
-
-  const update = () => {
-    if (opacity < 1) {
-      opacity += 0.01;
-    } else {
-      opacity = 1;
-    }
-
-    if (x > canvas.width + 100 || x < -100) {
-      velocity.x = -velocity.x;
-    }
-
-    if (y > canvas.height + 100 || y < -100) {
-      velocity.y = -velocity.y;
-    }
-
-    x += velocity.x;
-    y += velocity.y;
-  };
-
-  const draw = () => {
-    ctx.beginPath();
-    ctx.fillStyle = particleColor;
-    ctx.globalAlpha = opacity;
-    ctx.arc(x, y, radius, 0, 2 * Math.PI);
-    ctx.fill();
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      update();
-      draw();
-    }, 10);
-
-    return () => {
-      clearInterval(interval);
-    };
-  }, []);
-
-  return null;
-};
-
-const ParticleNetwork = ({ parent }) => {
-  const { canvas, ctx } = parent;
-
-  const createParticles = (isInitial) => {
-    const particles = [];
-    const quantity = canvas.width * canvas.height / parent.options.density;
-
-    if (isInitial) {
-      let counter = 0;
-      const createIntervalId = setInterval(() => {
-        if (counter < quantity - 1) {
-          particles.push(new Particle(parent));
-        } else {
-          clearInterval(createIntervalId);
-        }
-        counter++;
-      }, 250);
-    } else {
-      for (let i = 0; i < quantity; i++) {
-        particles.push(new Particle(parent));
-      }
-    }
-
-    return particles;
-  };
-
-  const update = () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.globalAlpha = 1;
-
-    const particles = createParticles(false);
-
-    for (let i = 0; i < particles.length; i++) {
-      for (let j = particles.length - 1; j > i; j--) {
-        let distance, p1 = particles[i], p2 = particles[j];
-        distance = Math.min(Math.abs(p1.x - p2.x), Math.abs(p1.y - p2.y));
-
-        if (distance > parent.options.netLineDistance) {
-          continue;
-        }
-
-        distance = Math.sqrt(
-          Math.pow(p1.x - p2.x, 2) +
-          Math.pow(p1.y - p2.y, 2)
-        );
-
-        if (distance > parent.options.netLineDistance) {
-          continue;
-        }
-
-        ctx.beginPath();
-        ctx.strokeStyle = parent.options.netLineColor;
-        ctx.globalAlpha = (parent.options.netLineDistance - distance) / parent.options.netLineDistance * p1.opacity * p2.opacity;
-        ctx.lineWidth = 0.7;
-        ctx.moveTo(p1.x, p1.y);
-        ctx.lineTo(p2.x, p2.y);
-        ctx.stroke();
-      }
-    }
-
-    for (let i = 0; i < particles.length; i++) {
-      particles[i].update();
-      particles[i].draw();
-    }
-
-    if (parent.options.velocity !== 0) {
-      requestAnimationFrame(update);
-    }
-  };
-
-  useEffect(() => {
-    update();
-
-    return () => {
-      cancelAnimationFrame(update);
-    };
-  }, []);
-
-  return null;
-};
-
-const ParticleNetworkAnimation = () => {
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-
-    const options = {
-      velocity: 1,
-      density: 15000,
-      netLineDistance: 200,
-      netLineColor: '#929292',
-      particleColors: ['#aaa']
-    };
-
-    const particleNetwork = new ParticleNetwork({ canvas, ctx, options });
-
-    const sizeCanvas = () => {
-      canvas.width = canvas.offsetWidth;
-      canvas.height = canvas.offsetHeight;
-    };
-
-    const bindUiActions = () => {
-      window.addEventListener('resize', () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        sizeCanvas();
-        particleNetwork.createParticles();
-      });
-    };
-
-    sizeCanvas();
-    particleNetwork.init();
-    bindUiActions();
-  }, []);
-
+import React from "react";
+import "./Particle.css";
+const Particle = () => {
   return (
-    <canvas
-      className="particle-network-animation"
-      ref={canvasRef}
-    />
+    <div>
+      <div id="Clouds">
+        <div className="Cloud Foreground"></div>
+        <div className="Cloud Background"></div>
+        <div className="Cloud Foreground"></div>
+        <div className="Cloud Background"></div>
+        <div className="Cloud Foreground"></div>
+        <div className="Cloud Background"></div>
+        <div className="Cloud Background"></div>
+        <div className="Cloud Foreground"></div>
+        <div className="Cloud Background"></div>
+        <div className="Cloud Background"></div>
+      </div>
+
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="40px"
+        height="24px"
+        viewBox="0 0 40 24"
+        xmlSpace="preserve"
+      >
+        <defs>
+          <path
+            id="Cloud"
+            d="M33.85,14.388c-0.176,0-0.343,0.034-0.513,0.054c0.184-0.587,0.279-1.208,0.279-1.853c0-3.463-2.809-6.271-6.272-6.271
+	c-0.38,0-0.752,0.039-1.113,0.104C24.874,2.677,21.293,0,17.083,0c-5.379,0-9.739,4.361-9.739,9.738
+	c0,0.418,0.035,0.826,0.084,1.229c-0.375-0.069-0.761-0.11-1.155-0.11C2.811,10.856,0,13.665,0,17.126
+	c0,3.467,2.811,6.275,6.272,6.275c0.214,0,27.156,0.109,27.577,0.109c2.519,0,4.56-2.043,4.56-4.562
+	C38.409,16.43,36.368,14.388,33.85,14.388z"
+          />
+        </defs>
+      </svg>
+    </div>
   );
 };
 
-export default ParticleNetworkAnimation;
+export default Particle;

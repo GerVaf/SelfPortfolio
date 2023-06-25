@@ -5,7 +5,7 @@ import { BiLink } from "../../node_modules/react-icons/bi";
 const Projects = () => {
   return (
     <>
-      <div className="p-5 text-white">
+      <div className="p-5 ">
         <h2 className="sm:text-4xl text-2xl sm:mb-2 ">-Projects</h2>
         <p className="sm:text-2xl text-lg sm:ml-10 ml-5">
           Recent Complete Projects
@@ -14,12 +14,12 @@ const Projects = () => {
       <div className="p-5 sm:flex sm:flex-row sm:flex-wrap flex flex-col gap-5 ">
         {ProjectsDisplay.map((pj) => {
           return (
-            <div className="sm:w-2/5 flex flex-col  bg-slate-100 sm:h-[455px] h-[330px]">
+            <div className="sm:w-2/5 flex flex-col rounded-lg  bg-slate-100 sm:h-[455px] h-[330px]">
               <img className="rounded-t-sm object-cover object-top h-2/4" src={pj.img} alt="Album" />
 
               <div className="card-body py-3 px-3">
                 <div className=" flex justify-center ">
-                  <h2 className="card-title font-bold sm:text-xl text-[#EC2626]">
+                  <h2 className="card-title font-bold sm:text-xl text-[#FD940A]">
                     {pj.title}
                   </h2>
                 </div>

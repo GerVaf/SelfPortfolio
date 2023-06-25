@@ -9,7 +9,7 @@ export const Data = [
         id:2,
         date:"-2022-",
         title:"Communication Skill",
-        cate:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque congue. Ut in risus volutpat libero pharetra tempor.I am writing to highlight my exceptional communication skills, which have proven invaluable in various professional settings.",
+        cate:"Project Requirements: Clear and effective communication is crucial for gathering project requirements. Web developers need to understand the client's objectives, target audience, functionality requirements, design preferences, and project constraints. Regular meetings, discussions, and documentation help ensure a shared understanding of the project scope.",
     },
     {
         id:3,
