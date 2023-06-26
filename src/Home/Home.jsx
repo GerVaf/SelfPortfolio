@@ -63,11 +63,11 @@ const Home = () => {
         {/* right side  */}
         <div className="sm:w-4/12">
           <div className="flex items-start gap-10">
-            <div className="h-[250px] w-2 border-opacity-30 border border-orange-500 relative overflow-hidden">
+            <div className="h-[105px] w-2 border-opacity-30 border border-orange-500 relative overflow-hidden">
               <motion.div
                 initial={{ y: 0 }}
-                animate={{ y: 250 }}
-                className="bg-[#FD940A] h-[200px] w-[100%]"
+                animate={{ y: 100 }}
+                className="bg-[#FD940A] h-[100px] w-[100%]"
                 transition={{
                   duration: 5,
                   repeat: Infinity,
@@ -75,7 +75,7 @@ const Home = () => {
                 }}
               ></motion.div>
             </div>
-            <div className=" text-[#FD940A] text-2xl font-bold ">
+            <div className=" text-[#FD940A] text-sm sm:text-2xl font-bold ">
               {textGroups.map((text, index) => (
                 <motion.div
                   key={index}
