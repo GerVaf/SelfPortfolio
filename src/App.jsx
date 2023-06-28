@@ -1,10 +1,10 @@
 import React from 'react'
-import Whole from './Whole'
+import All from './Whole'
 
 const App = () => {
   return (
     <>
-      <Whole/>
+      <All/>
     </>
   )
 }

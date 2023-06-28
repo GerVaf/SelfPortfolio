@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Footer from "./Head&Footer/Footer";
 import About from "./Home/About";
 import Home from "./Home/Home";
@@ -6,15 +6,54 @@ import Projects from "./Home/Projects";
 import Testimonial from "./Home/Testimonial";
 import Contact from "./Home/Contact";
 import SlideMenu from "./Head&Footer/SlideMenu";
+
 const Whole = () => {
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      if (scrollY >= 0 && scrollY < window.innerHeight) {
+      } else if (
+        scrollY >= window.innerHeight &&
+        scrollY < window.innerHeight * 2
+      ) {
+      } else if (
+        scrollY >= window.innerHeight * 2 &&
+        scrollY < window.innerHeight * 3
+      ) {
+      } else if (
+        scrollY >= window.innerHeight * 3 &&
+        scrollY < window.innerHeight * 4
+      ) {
+      } else if (scrollY >= window.innerHeight * 4) {
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const scrollToSection = (section) => {
+    const element = document.getElementById(section);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <div className="sm:flex sm:h-[100vh]">
         <div className="sm:w-3/12 hidden sm:block">
-          <SlideMenu />
+          <SlideMenu
+            setActiveSection={setActiveSection}
+            scrollToSection={scrollToSection}
+            activeSection={activeSection}
+          />
         </div>
-        {/* component */}
-        <div className="sm:w-9/12  overflow-y-scroll scrollbar-thin scrollbar-thumb-[#FD940A]">
+        <div className="sm:w-9/12 h-[calc(100vh - 4rem)] overflow-y-scroll scrollbar-thin scrollbar-thumb-[#FD940A]">
           <div id="home">
             <Home />
           </div>
@@ -32,7 +71,6 @@ const Whole = () => {
           </div>
         </div>
       </div>
-
       <div className="block sm:hidden">
         <Footer />
       </div>

@@ -62,12 +62,45 @@ const Home = () => {
 
         {/* right side  */}
         <div className="sm:w-4/12">
-          <div className="flex items-start gap-10">
-            <div className="h-[105px] w-2 border-opacity-30 border border-orange-500 relative overflow-hidden">
+          {/* for desktop  */}
+          <div className="sm:flex items-start gap-10 hidden">
+            <div className=" rounded-lg h-[250px] w-2 border-opacity-20 border border-orange-500 relative overflow-hidden ">
               <motion.div
                 initial={{ y: 0 }}
-                animate={{ y: 100 }}
-                className="bg-[#FD940A] h-[100px] w-[100%]"
+                animate={{ y: 250 }}
+                className="bg-[#FD940A] sm:h-[250px] h-[100px] w-[100%]"
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  repeatType: "loop",
+                }}
+              ></motion.div>
+            </div>
+            <div className=" text-[#FD940A] text-sm sm:text-2xl font-bold ">
+              {textGroups.map((text, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  animate={
+                    index === currentGroupIndex
+                      ? { opacity: 1 }
+                      : { opacity: 0, y: "-20px" }
+                  }
+                  exit={{ opacity: 0, y: "-20px" }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <p>{text}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+          {/* for phone  */}
+          <div className="flex items-start gap-10 sm:hidden">
+            <div className="h-[105px] rounded-lg  sm:h-[250px] w-2 border-opacity-20 border border-orange-500 relative  overflow-hidden">
+              <motion.div
+                initial={{ y: 0 }}
+                animate={{ y: 105 }}
+                className="bg-[#FD940A] sm:h-[250px] h-[100px] w-[100%]"
                 transition={{
                   duration: 5,
                   repeat: Infinity,

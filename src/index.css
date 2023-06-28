@@ -13,3 +13,6 @@ body{
 backdrop-filter: blur(10px);
 border: 1px solid rgba(255,255,255,0.25);
 }
+.active{
+ @apply text-white bg-[#FD940A] duration-300 transition border-[#FD940A] border  font-bold py-2 rounded-lg
+}
