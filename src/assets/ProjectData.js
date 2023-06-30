@@ -1,8 +1,8 @@
 import image1 from "./img/shoping.png";
 import image2 from "./img/TeamPortfolio.png";
 import image4 from "./img/auth.png";
-import image5 from './img/gameplatform.png'
-
+import image5 from "./img/gameplatform.png";
+import image6 from "./img/companyPortfolio.png";
 import react from "./img/React-icon.svg.png";
 import redux from "./img/redux-logo.svg";
 import tailwind from "./img/Tailwind_CSS_Logo.svg.png";
@@ -10,8 +10,8 @@ import daisyui from "./img/logo-4.svg";
 import flowbite from "./img/flowbite-logo.png";
 import framermotion from "./img/framermotion.png";
 import firebase from "./img/firebase.png";
-import axios from './img/axios.webp'
-import mantine from './img/mantine.png'
+import axios from "./img/axios.webp";
+import mantine from "./img/mantine.png";
 
 import image3 from "./img/shopping.png";
 export const ProjectsDisplay = [
@@ -41,6 +41,23 @@ export const ProjectsDisplay = [
         id: 4,
         img: framermotion,
       },
+    ],
+  },
+  {
+    id: 6,
+    title: "Company Portfolio",
+    img: image6,
+    link: "https://company-portfolio-pied.vercel.app/",
+    language: [
+      {
+        id: 6,
+        img: react,
+      },
+      {
+        id: 2,
+        img: tailwind,
+      },
+      
     ],
   },
   {
