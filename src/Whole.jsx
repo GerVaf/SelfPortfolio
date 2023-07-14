@@ -55,7 +55,10 @@ const Whole = () => {
         </div>
         <div className="sm:w-9/12 h-[calc(100vh - 4rem)] overflow-y-scroll scrollbar-thin scrollbar-thumb-[#FD940A]">
           <div id="home">
-            <Home />
+            <Home
+              setActiveSection={setActiveSection}
+              scrollToSection={scrollToSection}
+            />
           </div>
           <div id="experience">
             <About />

@@ -14,14 +14,14 @@ const Projects = () => {
       <div className="p-5 sm:justify-around sm:flex sm:flex-row sm:flex-wrap flex flex-col gap-5 ">
         {ProjectsDisplay.map((pj) => {
           return (
-            <div className="sm:w-2/5 flex flex-col rounded-lg  bg-slate-100 sm:h-[455px] h-[330px]">
+            <div className="sm:w-4/5 flex flex-col rounded-lg  bg-slate-100 sm:h-[700px] h-[330px] shadow-lg">
               <img
                 className="rounded-t-sm object-cover object-top h-2/4"
                 src={pj.img}
                 alt="Album"
               />
 
-              <div className="card-body py-3 px-3">
+              <div className="card-body flex flex-col justify-around py-3 px-3">
                 <div className=" flex justify-center ">
                   <h2 className="card-title font-bold sm:text-xl text-[#FD940A]">
                     {pj.title}

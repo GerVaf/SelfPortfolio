@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-scroll";
 import Cv from "../assets/img/Cv.pdf";
 import { motion } from "../../node_modules/framer-motion";
+import CountUp from "react-countup";
+import ScrollTrigger from "react-scroll-trigger";
+import CustomizeButton from "../Head&Footer/CustomizeButton";
 
-const Home = () => {
+const Home = ({ scrollToSection, setActiveSection }) => {
+  const [count, setCount] = useState(false);
+
   // for text animation
   const textGroups = [
     "I'm trying to Full-Stack Developer",
@@ -25,7 +29,7 @@ const Home = () => {
   }, [textGroups.length]);
   return (
     <>
-      <div className="flex sm:flex-row items-center flex-col">
+      <div className="flex sm:flex-row items-center flex-col ">
         {/* left side  */}
         <div className="sm:w-8/12 sm:px-40 sm:py-20 p-4 flex flex-col gap-5 sm:gap-16">
           {/* intro */}
@@ -44,19 +48,54 @@ const Home = () => {
           </div>
 
           {/* button */}
-          <div className="mb-5 relative">
-            <div className="flex gap-4">
+          <div className="flex gap-10 flex-col ">
+            <div className="flex gap-5 justify-around">
               <a href={Cv} download="ThantZinMin_Cv">
-                <button className="rounded-md sm:px-12 px-3 sm:py-4 py-1 bg-gradient-to-r from-[#FD940A] to-orange-500 sm:font-semibold sm:text-xl text-white">
-                  Download CV
-                </button>
+                <CustomizeButton> Download CV</CustomizeButton>
               </a>
-              <Link to="connect" smooth={true} duration={400}>
-                <button className="rounded-md sm:px-12 px-3 sm:py-4 py-1 bg-gradient-to-r from-[#FD940A] to-orange-500 sm:font-semibold sm:text-xl text-white">
-                  Hire Now
-                </button>
-              </Link>
+              <div
+                onClick={() => {
+                  scrollToSection("connect"), setActiveSection("connect");
+                }}
+              >
+                <CustomizeButton>Hire Me</CustomizeButton>
+              </div>
             </div>
+            {/* the count up  */}
+            <ScrollTrigger
+              onEnter={() => setCount(true)}
+              onExit={() => setCount(false)}
+            >
+              <div className="flex gap-5 text-white justify-around">
+                <div className="bg-gradient-to-r w-32 hover:from-[#ffba0d] hover:to-orange-400 from-[#FD940A] to-orange-500 rounded-md flex flex-col justify-center items-center text-sm p-1">
+                  <h1 className="sm:text-lg text-xl">
+                    {count && (
+                      <CountUp start={0} end={1} duration={5} delay={0.5} />
+                    )}
+                    +
+                  </h1>
+                  <h2>YEARS OF EXPERINCES</h2>
+                </div>
+                <div className="bg-gradient-to-r w-32 hover:from-[#ffba0d] hover:to-orange-400 from-[#FD940A] to-orange-500 rounded-md flex flex-col justify-center items-center text-sm p-1">
+                  <h1 className="sm:text-lg text-xl">
+                    {count && (
+                      <CountUp start={0} end={10} duration={5} delay={0.5} />
+                    )}
+                    +
+                  </h1>
+                  <h2>PROJECT COMPLETED</h2>
+                </div>
+                <div className="bg-gradient-to-r w-32 hover:from-[#ffba0d] hover:to-orange-400 from-[#FD940A] to-orange-500 rounded-md flex flex-col justify-center items-center text-sm p-1">
+                  <h1 className="sm:text-lg text-xl">
+                    {count && (
+                      <CountUp start={0} end={100} duration={5} delay={0.5} />
+                    )}
+                    +
+                  </h1>
+                  <h2>HAPPY USERS</h2>
+                </div>
+              </div>
+            </ScrollTrigger>
           </div>
         </div>
 
