@@ -58,7 +58,7 @@ const Testimonial = () => {
                 <div className=" my-3 m-auto w-56">
                   <img src={item.img} />
                 </div>
-                <h1 className=" font-bold text-[#EC2626]">{item.title}</h1>
+                <h1 className=" font-bold text-[#FD940A]">{item.title}</h1>
               </div>
               <div className="card-bottom">
                 <h3>{item.text}</h3>

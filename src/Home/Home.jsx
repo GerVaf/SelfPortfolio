@@ -66,8 +66,8 @@ const Home = ({ scrollToSection, setActiveSection }) => {
               onEnter={() => setCount(true)}
               onExit={() => setCount(false)}
             >
-              <div className="flex gap-5 text-white justify-around">
-                <div className="bg-gradient-to-r w-32 hover:from-[#ffba0d] hover:to-orange-400 from-[#FD940A] to-orange-500 rounded-md flex flex-col justify-center items-center text-sm p-1">
+              <div className="flex gap-5 rounded-md h-[10vh] bg-[rgb(253,148,10)] text-white justify-around">
+                <div className=" w-4/12 flex flex-col justify-center items-center text-sm p-1">
                   <h1 className="sm:text-lg text-xl">
                     {count && (
                       <CountUp start={0} end={1} duration={5} delay={0.5} />
@@ -76,7 +76,7 @@ const Home = ({ scrollToSection, setActiveSection }) => {
                   </h1>
                   <h2>YEARS OF EXPERINCES</h2>
                 </div>
-                <div className="bg-gradient-to-r w-32 hover:from-[#ffba0d] hover:to-orange-400 from-[#FD940A] to-orange-500 rounded-md flex flex-col justify-center items-center text-sm p-1">
+                <div className=" w-4/12 flex flex-col justify-center items-center text-sm p-1">
                   <h1 className="sm:text-lg text-xl">
                     {count && (
                       <CountUp start={0} end={10} duration={5} delay={0.5} />
@@ -85,7 +85,7 @@ const Home = ({ scrollToSection, setActiveSection }) => {
                   </h1>
                   <h2>PROJECT COMPLETED</h2>
                 </div>
-                <div className="bg-gradient-to-r w-32 hover:from-[#ffba0d] hover:to-orange-400 from-[#FD940A] to-orange-500 rounded-md flex flex-col justify-center items-center text-sm p-1">
+                <div className=" w-4/12 flex flex-col justify-center items-center text-sm p-1">
                   <h1 className="sm:text-lg text-xl">
                     {count && (
                       <CountUp start={0} end={100} duration={5} delay={0.5} />

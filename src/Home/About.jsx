@@ -21,7 +21,7 @@ const About = () => {
                 typeSpeed={120}
                 backSpeed={70}
                 loop
-                cursorChar="#"
+                cursorChar="-"
               />
             </h2>
             <hr className="sm:w-36 w-20 border-[#FD940A] border-b-2 mb-5" />
