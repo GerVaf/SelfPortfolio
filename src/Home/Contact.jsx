@@ -1,17 +1,53 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 import animation3 from "../assets/img/animation3.gif";
+
 const Contact = () => {
+  const formRef = useRef();
+
+  // Function to handle form submission and sending email
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        // Replace 'YOUR_SERVICE_ID' with your EmailJS service ID
+        "service_wpft40h",
+        // Replace 'YOUR_TEMPLATE_ID' with your EmailJS template ID
+        "template_e7mqtsq",
+        // Use the ref to get the form element
+        formRef.current,
+        // Replace 'YOUR_USER_ID' with your EmailJS user ID
+        "wBktBTQwvpgnAgKq5"
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully!", result.text);
+          // Add any actions after a successful email submission here
+        },
+        (error) => {
+          console.log("Error sending email:", error.text);
+          // Add any error handling code here
+        }
+      );
+
+    // Reset the form after submission (optional)
+    e.target.reset();
+  };
+
   return (
     <>
       {/* title  */}
-      <div className=" p-5 sm:flex sm:mb-10 flex flex-col">
-        <h2 className="sm:text-4xl text-2xl sm:mb-2 text-[#FD940A] font-bold">-Let's Connect</h2>
+      <div className="p-5 sm:flex sm:mb-10 flex flex-col">
+        <h2 className="sm:text-4xl text-2xl sm:mb-2 text-[#FD940A] font-bold">
+          -Let's Connect
+        </h2>
         <p className="sm:text-2xl text-lg sm:ml-10 ml-5">Connect To ME</p>
       </div>
 
       {/* cate and inputfield  */}
-      <div className="p-5 sm:flex mb-10">
-        <div className=" sm:w-3/5 mb-5 ">
+      <div className="p-5 sm:flex  mb-10">
+        <div className="sm:w-3/5 mb-5">
           <p>
             Thank you for watching. I am excited about the opportunity to work
             with you and help bring your vision to life. As a web developer with
@@ -33,7 +69,7 @@ const Contact = () => {
             <img src={animation3} className="sm:w-80" alt="" />
             {/* information */}
             <div>
-              <div className=" ml-5 sm:ml-16 pl-2 sm:text-[20px] mb-5 text-[10px]  border-l-2 border-l-[#FD940A]">
+              <div className="ml-5 sm:ml-16 pl-2 sm:text-[20px] mb-5 text-[10px] border-l-2 border-l-[#FD940A]">
                 <p>+95 942 521 2523</p>
                 <p>thantzinmin667@gmail.com</p>
                 <p>Yangon,Tamwe,Myit Thar Nyout</p>
@@ -43,41 +79,40 @@ const Contact = () => {
         </div>
 
         {/* input field  */}
-
-        <div className="sm:w-2/5 flex flex-col items-center gap-5 mb-5">
-          <p className="sm:text-xl">Let's work with togeather</p>
-          <hr className="sm:border-[#FD940A] sm:border-2 sm:w-36" />
+        {/* ... Your existing input field code ... */}
+        <form className="sm:w-2/5 flex flex-col justify-center items-center gap-5" ref={formRef} onSubmit={sendEmail}>
+          <p className="sm:text-xl font-bold">Let's work with together</p>
+          <hr className="sm:border-[#FD940A] sm:border-2 sm:w-36 sm:mb-10" />
           <div className="flex flex-col gap-3 text-black">
             <input
               type="text"
-              className=" rounded-sm p-2 px-5 outline-none border-none"
+              className="rounded-sm p-2 px-5 outline-none border-none"
               placeholder="Enter Your Name"
+              name="from_name"
             />
             <input
-              type="text"
-              className=" rounded-sm p-2 px-5 outline-none border-none"
+              type="email"
+              className="rounded-sm p-2 px-5 outline-none border-none"
               placeholder="Enter Your Email"
+              name="reply_to"
             />
             <textarea
-              name=""
-              className=" rounded-sm p-2 px-5 outline-none border-none"
+              name="message"
+              className="rounded-sm p-2 px-5 outline-none border-none"
               placeholder="Hit Me Something ....."
               id=""
               cols="30"
               rows="10"
             ></textarea>
           </div>
-          <div>
-            <button className=" px-2 py-2 bg-gradient-to-r from-[#FD940A] to-orange-500 text-white font-semibold rounded-md">
-              Submit Now
-            </button>
-          </div>
-        </div>
+          <button
+            type="submit"
+            className="px-2 py-2 bg-gradient-to-r from-[#FD940A] to-orange-500 text-white font-semibold rounded-md"
+          >
+            Submit Now
+          </button>
+        </form>
       </div>
-      {/* <img
-        src="https://assets8.lottiefiles.com/packages/lf20_Zf1puBXhjG.json"
-        alt=""
-      /> */}
     </>
   );
 };

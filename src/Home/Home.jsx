@@ -4,6 +4,7 @@ import { motion } from "../../node_modules/framer-motion";
 import CountUp from "react-countup";
 import ScrollTrigger from "react-scroll-trigger";
 import CustomizeButton from "../Head&Footer/CustomizeButton";
+import PolarAreaChart from "../components/Chart";
 
 const Home = ({ scrollToSection, setActiveSection }) => {
   const [count, setCount] = useState(false);
@@ -46,10 +47,10 @@ const Home = ({ scrollToSection, setActiveSection }) => {
               experince
             </p>
           </div>
-
-          {/* button */}
+          {/* button count up and chart  */}
           <div className="flex gap-10 flex-col ">
-            <div className="flex gap-5 justify-around">
+          {/* button */}
+            <div className="flex gap-5 flex-col sm:flex-row justify-around items-center">
               <a href={Cv} download="ThantZinMin_Cv">
                 <CustomizeButton> Download CV</CustomizeButton>
               </a>
@@ -61,6 +62,7 @@ const Home = ({ scrollToSection, setActiveSection }) => {
                 <CustomizeButton>Hire Me</CustomizeButton>
               </div>
             </div>
+            <PolarAreaChart/>
             {/* the count up  */}
             <ScrollTrigger
               onEnter={() => setCount(true)}
