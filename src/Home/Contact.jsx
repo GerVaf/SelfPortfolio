@@ -91,9 +91,14 @@ const Contact = () => {
           ref={formRef}
           onSubmit={sendEmail}
         >
-          <p className="sm:text-xl font-bold">Let's work with together</p>
-          <hr className="sm:border-[#FD940A] sm:border-2 sm:w-36 sm:mb-10" />
+          <div className="flex flex-col gap-3">
+            <p className="sm:text-xl text-[#FD940A] font-bold">
+              Let's work with together
+            </p>
+            <hr className="border-[#FD940A] border sm:border-2 w-36 " />
+          </div>
           <div className="flex flex-col gap-3 text-black">
+            <label className="text-gray-600" htmlFor="email">Your Email*</label>
             <input
               type="text"
               className="rounded-sm p-2 px-5 outline-none border-none"
@@ -101,6 +106,7 @@ const Contact = () => {
               name="from_name"
               required
             />
+            <label className="text-gray-600" htmlFor="about">Message*</label>
             <textarea
               name="message"
               className="rounded-sm p-2 px-5 outline-none border-none"

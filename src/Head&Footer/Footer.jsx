@@ -7,15 +7,24 @@ import {
 const Footer = () => {
   return (
     <>
-      <div className="sm:justify-between rounded-t-sm py-5 sm:pt-10 flex flex-col items-center gap-5 bg-white">
+      <div className="sm:justify-between pt-5 sm:pt-0 rounded-t-sm flex flex-col items-center gap-5 bg-white">
         <div className="sm:text-2xl text-2xl flex gap-10">
-          <a href="https://www.facebook.com/thantzin.min.9400984" className=" w-16 h-10 flex justify-center items-center rounded-full border border-slate-700 hover:border-[#FD940A] hover:text-[#FD940A] duration-500 text-slate-700 transition cursor-pointer">
+          <a
+            href="https://www.facebook.com/thantzin.min.9400984"
+            className=" w-16 h-10 flex justify-center items-center rounded-full border border-slate-700 hover:border-[#FD940A] hover:text-[#FD940A] duration-500 text-slate-700 transition cursor-pointer"
+          >
             <FaFacebook />
           </a>
-          <a href="" className=" w-16 h-10 flex justify-center items-center rounded-full border border-slate-700 hover:border-[#FD940A] hover:text-[#FD940A] duration-500 text-slate-700 transition cursor-pointer">
+          <a
+            href=""
+            className=" w-16 h-10 flex justify-center items-center rounded-full border border-slate-700 hover:border-[#FD940A] hover:text-[#FD940A] duration-500 text-slate-700 transition cursor-pointer"
+          >
             <FaInstagram />
           </a>
-          <a href="https://github.com/GerVaf" className=" w-16 h-10 flex justify-center items-center rounded-full border border-slate-700 hover:border-[#FD940A] hover:text-[#FD940A] duration-500 text-slate-700 transition cursor-pointer">
+          <a
+            href="https://github.com/GerVaf"
+            className=" w-16 h-10 flex justify-center items-center rounded-full border border-slate-700 hover:border-[#FD940A] hover:text-[#FD940A] duration-500 text-slate-700 transition cursor-pointer"
+          >
             <FaGithub />
           </a>
         </div>

@@ -10,7 +10,7 @@ const App = () => {
   useEffect(() => {
     const loadingTimer = setTimeout(() => {
       setLoading(false);
-    }, 15000); // 15 seconds in milliseconds
+    }, 5000); // 15 seconds in milliseconds
 
     // Clean up the timer when the component unmounts or when the loading is finished
     return () => clearTimeout(loadingTimer);

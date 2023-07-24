@@ -53,7 +53,7 @@ const Whole = () => {
             activeSection={activeSection}
           />
         </div>
-        <div className="sm:w-9/12 h-[calc(100vh - 4rem)] overflow-y-scroll scrollbar-thin scrollbar-thumb-[#FD940A]">
+        <div className="sm:w-9/12 overflow-y-scroll scrollbar-thin scrollbar-thumb-[#FD940A]">
           <div className="" id="home">
             <Home
               setActiveSection={setActiveSection}

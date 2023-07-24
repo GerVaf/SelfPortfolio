@@ -7,9 +7,9 @@ import Particle from "../Home/Particle";
 
 const SlideMenu = ({ activeSection, setActiveSection, scrollToSection }) => {
   return (
-    <div className="bg-white h-[100vh] flex flex-col items-center justify-between">
-      {/* back ground animation  */}
-      <div className="w-[100%] h-[30%]">
+    <div className="bg-white h-[100vh] overflow-hidden flex flex-col items-center justify-between">
+      {/* back ground animation and img  */}
+      <div className="w-[100%] h-[30vh]">
         <div className=" bg-[#FD940A] z-20 h-[210px] rounded-b-sm relative overflow-hidden">
           <Particle />
         </div>
@@ -21,7 +21,7 @@ const SlideMenu = ({ activeSection, setActiveSection, scrollToSection }) => {
       </div>
 
       {/* Slide menu and footer and animation  */}
-      <div className="flex flex-col justify-around h-[70%]">
+      <div className="flex flex-col w-[100%] justify-around h-[40vh] px-5">
         {/* menu  */}
         <div className="flex gap-3 justify-around ">
           <div className="flex flex-col w-6/12 gap-5">
@@ -90,10 +90,10 @@ const SlideMenu = ({ activeSection, setActiveSection, scrollToSection }) => {
           </div>
         </div>
         {/* animation gif  */}
-        <img className=" h-52 object-contain" src={ani} alt="" />
+        <img className=" hidden md:block h-44 object-contain" src={ani} alt="" />
 
-        <Footer />
       </div>
+        <Footer />
     </div>
   );
 };

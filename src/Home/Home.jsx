@@ -32,7 +32,7 @@ const Home = ({ scrollToSection, setActiveSection }) => {
     <>
       <div className="flex sm:flex-row items-center flex-col ">
         {/* left side  */}
-        <div className="sm:w-8/12 sm:px-40 sm:py-20 p-4 flex flex-col gap-5 sm:gap-16">
+        <div className="sm:w-9/12 sm:px-40 sm:py-20 p-4 flex flex-col gap-5 sm:gap-16">
           {/* intro */}
           <div className=" flex flex-col gap-2">
             <h2 className="sm:text-4xl text-xl font-bold">
@@ -48,8 +48,8 @@ const Home = ({ scrollToSection, setActiveSection }) => {
             </p>
           </div>
           {/* button count up and chart  */}
-          <div className="flex gap-10 flex-col ">
-          {/* button */}
+          <div className="flex gap-10 flex-col justify-center items-center ">
+            {/* button */}
             <div className="flex gap-5 flex-col sm:flex-row justify-around items-center">
               <a href={Cv} download="ThantZinMin_Cv">
                 <CustomizeButton> Download CV</CustomizeButton>
@@ -62,7 +62,7 @@ const Home = ({ scrollToSection, setActiveSection }) => {
                 <CustomizeButton>Hire Me</CustomizeButton>
               </div>
             </div>
-            <PolarAreaChart/>
+            <PolarAreaChart />
             {/* the count up  */}
             <ScrollTrigger
               onEnter={() => setCount(true)}
@@ -102,7 +102,7 @@ const Home = ({ scrollToSection, setActiveSection }) => {
         </div>
 
         {/* right side  */}
-        <div className="sm:w-4/12">
+        <div className="sm:w-3/12">
           {/* for desktop  */}
           <div className="sm:flex items-start gap-10 hidden">
             <div className=" rounded-lg h-[250px] w-2 border-opacity-20 border border-orange-500 relative overflow-hidden ">

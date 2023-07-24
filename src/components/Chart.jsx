@@ -23,6 +23,7 @@ const PolarAreaChart = () => {
         options: {
           chart: {
             width: 300,
+            height:400
           },
           legend: {
             position: "bottom",
