@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 import animation3 from "../assets/img/animation3.gif";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const formRef = useRef();
 
-  // Function to handle form submission and sending email
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -23,10 +24,16 @@ const Contact = () => {
       .then(
         (result) => {
           console.log("Email sent successfully!", result.text);
+          // Show toast notification for successful email submission
+          toast.success("Email sent successfully! I'll contact you later");
+
           // Add any actions after a successful email submission here
         },
         (error) => {
           console.log("Error sending email:", error.text);
+          // Show toast notification for email sending error
+          toast.error("Error sending email.");
+
           // Add any error handling code here
         }
       );
@@ -34,7 +41,6 @@ const Contact = () => {
     // Reset the form after submission (optional)
     e.target.reset();
   };
-
   return (
     <>
       {/* title  */}
@@ -80,21 +86,20 @@ const Contact = () => {
 
         {/* input field  */}
         {/* ... Your existing input field code ... */}
-        <form className="sm:w-2/5 flex flex-col justify-center items-center gap-5" ref={formRef} onSubmit={sendEmail}>
+        <form
+          className="sm:w-2/5 flex flex-col justify-center items-center gap-5"
+          ref={formRef}
+          onSubmit={sendEmail}
+        >
           <p className="sm:text-xl font-bold">Let's work with together</p>
           <hr className="sm:border-[#FD940A] sm:border-2 sm:w-36 sm:mb-10" />
           <div className="flex flex-col gap-3 text-black">
             <input
               type="text"
               className="rounded-sm p-2 px-5 outline-none border-none"
-              placeholder="Enter Your Name"
+              placeholder="Enter Your Email "
               name="from_name"
-            />
-            <input
-              type="email"
-              className="rounded-sm p-2 px-5 outline-none border-none"
-              placeholder="Enter Your Email"
-              name="reply_to"
+              required
             />
             <textarea
               name="message"
@@ -103,6 +108,7 @@ const Contact = () => {
               id=""
               cols="30"
               rows="10"
+              required
             ></textarea>
           </div>
           <button

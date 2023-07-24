@@ -10,7 +10,7 @@ import daisyui from "./img/logo-4.svg";
 import flowbite from "./img/flowbite-logo.png";
 import framermotion from "./img/framermotion.png";
 import firebase from "./img/firebase.png";
-import axios from "./img/axios.webp";
+import axios from "./img/axios.svg";
 import mantine from "./img/mantine.png";
 
 import image3 from "./img/shopping.png";

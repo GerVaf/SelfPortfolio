@@ -68,7 +68,7 @@ const Home = ({ scrollToSection, setActiveSection }) => {
               onEnter={() => setCount(true)}
               onExit={() => setCount(false)}
             >
-              <div className="flex gap-5 rounded-md h-[10vh] bg-[rgb(253,148,10)] text-white justify-around">
+              <div className="flex font-bold gap-5 rounded-md h-[10vh] bg-[rgb(253,148,10)] text-white justify-around">
                 <div className=" w-4/12 flex flex-col justify-center items-center text-sm p-1">
                   <h1 className="sm:text-lg text-xl">
                     {count && (

@@ -30,7 +30,7 @@ const Projects = () => {
 
                 {/* include */}
                 <div className="h-[50px] sm:h-[100px]">
-                  <div className=" flex gap-5 my-4">
+                  <div className=" flex gap-5 items-center h-full justify-around">
                     {pj.language.map((lang) => {
                       return (
                         <img

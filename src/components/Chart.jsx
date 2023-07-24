@@ -7,6 +7,9 @@ const PolarAreaChart = () => {
       id: "polar-area-chart",
     },
     labels: ["HTML", "CSS", "Javascript", "TypeScript", "ReactJs", "NodeJs"],
+    yaxis: {
+      show: false
+    },
     plotOptions: {
       polarArea: {
         rings: {
