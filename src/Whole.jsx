@@ -57,7 +57,7 @@ const Whole = () => {
           <IoIosArrowUp
             onClick={() => setShow(!show)}
             className={`${
-              show ? "mb-10" : "rotate-180 mb-0"
+              show ? " mb-32" : "rotate-180 mb-0"
             } text-lg bg-[#FD940A] transition duration-300 text-white w-11 rounded-md`}
           />
           <div
