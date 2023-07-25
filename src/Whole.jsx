@@ -44,7 +44,7 @@ const Whole = () => {
     }
   };
   // for mobile menu
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   return (
     <>
       <div className="sm:flex sm:h-[100vh] relative">
