@@ -49,16 +49,23 @@ const Whole = () => {
     <>
       <div className="sm:flex sm:h-[100vh] relative">
         {/* for mobile menu  */}
-        <div className={`sm:hidden flex flex-col gap-2 fixed ${show?'translate-y-[610px]':'translate-y-[440px]'} z-20 right-5 items-center trnasition duration-300`}>
-          <IoIosArrowUp onClick={()=>setShow(!show)} className={`${show?'mb-10':'rotate-180 mb-0'} text-lg bg-[#FD940A] transition duration-300 text-white w-11 rounded-md`} />
+        <div
+          className={`sm:hidden flex flex-col gap-2 fixed ${
+            show ? "translate-y-[610px]" : "translate-y-[440px]"
+          } z-20 right-5 items-center trnasition duration-300`}
+        >
+          <IoIosArrowUp
+            onClick={() => setShow(!show)}
+            className={`${
+              show ? "mb-10" : "rotate-180 mb-0"
+            } text-lg bg-[#FD940A] transition duration-300 text-white w-11 rounded-md`}
+          />
           <div
             onClick={() => {
               scrollToSection("home"), setActiveSection("home");
             }}
             className={
-              activeSection === "home"
-                ? "active"
-                : "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
+              "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
             }
           >
             Home
@@ -68,9 +75,7 @@ const Whole = () => {
               scrollToSection("experience"), setActiveSection("experience");
             }}
             className={
-              activeSection === "experience"
-                ? "active"
-                : "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
+              "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
             }
           >
             About
@@ -80,9 +85,7 @@ const Whole = () => {
               scrollToSection("projects"), setActiveSection("projects");
             }}
             className={
-              activeSection === "projects"
-                ? "active"
-                : "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
+              "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
             }
           >
             Projects
@@ -92,9 +95,7 @@ const Whole = () => {
               scrollToSection("knowlage"), setActiveSection("knowlage");
             }}
             className={
-              activeSection === "knowlage"
-                ? "active"
-                : "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
+              "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
             }
           >
             Knowledge
@@ -104,9 +105,7 @@ const Whole = () => {
               scrollToSection("connect"), setActiveSection("connect");
             }}
             className={
-              activeSection === "connect"
-                ? "active"
-                : "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
+              "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
             }
           >
             Contact
