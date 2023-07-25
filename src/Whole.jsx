@@ -6,6 +6,7 @@ import Projects from "./Home/Projects";
 import Testimonial from "./Home/Testimonial";
 import Contact from "./Home/Contact";
 import SlideMenu from "./Head&Footer/SlideMenu";
+import { IoIosArrowDown, IoIosArrowUp } from "../node_modules/react-icons/io";
 
 const Whole = () => {
   const [activeSection, setActiveSection] = useState("");
@@ -42,10 +43,76 @@ const Whole = () => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-
+  // for mobile menu
+  const [show, setShow] = useState(false);
   return (
     <>
-      <div className="sm:flex sm:h-[100vh]">
+      <div className="sm:flex sm:h-[100vh] relative">
+        {/* for mobile menu  */}
+        <div className={`sm:hidden flex flex-col gap-2 fixed ${show?'translate-y-[610px]':'translate-y-[440px]'} z-20 right-5 items-center trnasition duration-300`}>
+          <IoIosArrowUp onClick={()=>setShow(!show)} className={`${show?'mb-10':'rotate-180 mb-0'} text-lg bg-[#FD940A] transition duration-300 text-white w-11 rounded-md`} />
+          <div
+            onClick={() => {
+              scrollToSection("home"), setActiveSection("home");
+            }}
+            className={
+              activeSection === "home"
+                ? "active"
+                : "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
+            }
+          >
+            Home
+          </div>
+          <div
+            onClick={() => {
+              scrollToSection("experience"), setActiveSection("experience");
+            }}
+            className={
+              activeSection === "experience"
+                ? "active"
+                : "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
+            }
+          >
+            About
+          </div>
+          <div
+            onClick={() => {
+              scrollToSection("projects"), setActiveSection("projects");
+            }}
+            className={
+              activeSection === "projects"
+                ? "active"
+                : "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
+            }
+          >
+            Projects
+          </div>
+          <div
+            onClick={() => {
+              scrollToSection("knowlage"), setActiveSection("knowlage");
+            }}
+            className={
+              activeSection === "knowlage"
+                ? "active"
+                : "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
+            }
+          >
+            Knowledge
+          </div>
+          <div
+            onClick={() => {
+              scrollToSection("connect"), setActiveSection("connect");
+            }}
+            className={
+              activeSection === "connect"
+                ? "active"
+                : "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
+            }
+          >
+            Contact
+          </div>
+        </div>
+        {/* for desktop menu  */}
         <div className="sm:w-3/12 hidden sm:block">
           <SlideMenu
             setActiveSection={setActiveSection}
