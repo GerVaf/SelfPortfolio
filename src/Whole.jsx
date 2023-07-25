@@ -65,7 +65,7 @@ const Whole = () => {
               setShow(!show), scrollToSection("home"), setActiveSection("home");
             }}
             className={
-              `${show?'hidden':''}active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]`
+              `${show?'hidden':''}active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px] text-white transition duration-300`
             }
           >
             Home
@@ -77,7 +77,7 @@ const Whole = () => {
                 setActiveSection("experience");
             }}
             className={
-              `${show?'hidden':''}active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]`
+              `${show?'hidden':''}active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px] text-white transition duration-300`
             }
           >
             About
@@ -89,7 +89,7 @@ const Whole = () => {
                 setActiveSection("projects");
             }}
             className={
-              `${show?'hidden':''}active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]`
+              `${show?'hidden':''}active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px] text-white transition duration-300`
             }
           >
             Projects
@@ -101,7 +101,7 @@ const Whole = () => {
                 setActiveSection("knowlage");
             }}
             className={
-              `${show?'hidden':''}active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]`
+              `${show?'hidden':''}active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px] text-white transition duration-300`
             }
           >
             Knowledge
@@ -113,7 +113,7 @@ const Whole = () => {
                 setActiveSection("connect");
             }}
             className={
-              `${show?'hidden':''}active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]`
+              `${show?'hidden':''}active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px] text-white transition duration-300`
             }
           >
             Contact
