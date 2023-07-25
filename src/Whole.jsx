@@ -62,7 +62,7 @@ const Whole = () => {
           />
           <div
             onClick={() => {
-              scrollToSection("home"), setActiveSection("home");
+              setShow(!show), scrollToSection("home"), setActiveSection("home");
             }}
             className={
               "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
@@ -72,7 +72,9 @@ const Whole = () => {
           </div>
           <div
             onClick={() => {
-              scrollToSection("experience"), setActiveSection("experience");
+              setShow(!show),
+                scrollToSection("experience"),
+                setActiveSection("experience");
             }}
             className={
               "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
@@ -82,7 +84,9 @@ const Whole = () => {
           </div>
           <div
             onClick={() => {
-              scrollToSection("projects"), setActiveSection("projects");
+              setShow(!show),
+                scrollToSection("projects"),
+                setActiveSection("projects");
             }}
             className={
               "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
@@ -92,7 +96,9 @@ const Whole = () => {
           </div>
           <div
             onClick={() => {
-              scrollToSection("knowlage"), setActiveSection("knowlage");
+              setShow(!show),
+                scrollToSection("knowlage"),
+                setActiveSection("knowlage");
             }}
             className={
               "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
@@ -102,7 +108,9 @@ const Whole = () => {
           </div>
           <div
             onClick={() => {
-              scrollToSection("connect"), setActiveSection("connect");
+              setShow(!show),
+                scrollToSection("connect"),
+                setActiveSection("connect");
             }}
             className={
               "active font-bold py-2 rounded-lg flex justify-center w-20 text-[10px]"
