@@ -1,27 +1,20 @@
 import React, { useState } from "react";
-import profile from "../assets/img/profile.jpg";
+import profile from "../assets/img/profile.jpeg";
 import Footer from "./Footer";
 import ani from "../assets/img/slide_menu.gif";
-// Import ParticleNetworkAnimation component correctly
-import Particle from "../Home/Particle";
 
 const SlideMenu = ({ activeSection, setActiveSection, scrollToSection }) => {
   return (
-    <div className="bg-white h-[100vh] overflow-hidden flex flex-col items-center justify-between">
-      {/* back ground animation and img  */}
-      <div className="w-[100%] h-[30vh]">
-        <div className=" bg-[#FD940A] z-20 h-[210px] rounded-b-sm relative overflow-hidden">
-          <Particle />
-        </div>
-        <img
-          className=" border-4 border-white absolute top-36 left-12 z-30 w-48 h-36 rounded-xl object-cover"
-          src={profile}
-          alt=""
-        />
-      </div>
+    <div className="bg-white h-[100vh] overflow-hidden flex flex-col items-center justify-between rounded-sm">
+      {/* profile          */}
+      <img
+        className=" w-[100%] object-top h-[30vh] rounded-sm object-cover"
+        src={profile}
+        alt=""
+      />
 
       {/* Slide menu and footer and animation  */}
-      <div className="flex flex-col w-[100%] justify-around h-[40vh] px-5">
+      <div className="flex flex-col w-[100%] justify-around h-[70vh] px-5">
         {/* menu  */}
         <div className="flex gap-3 justify-around ">
           <div className="flex flex-col w-6/12 gap-5">
@@ -90,10 +83,13 @@ const SlideMenu = ({ activeSection, setActiveSection, scrollToSection }) => {
           </div>
         </div>
         {/* animation gif  */}
-        <img className=" hidden md:block h-44 object-contain" src={ani} alt="" />
-
+        <img
+          className=" hidden md:block h-44 object-contain"
+          src={ani}
+          alt=""
+        />
       </div>
-        <Footer />
+      <Footer />
     </div>
   );
 };

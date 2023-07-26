@@ -1,11 +1,5 @@
 export const Data = [
     {
-        id:1,
-        date:"-2022-",
-        title:"Web Developer",
-        cate:"I have gained extensive experience in HTML, CSS, JavaScript, and various front-end frameworks such as React and Tailwind and other packages. I have been responsible for developing user-friendly, responsive websites and applications for a range of clients, including e-commerce websites, CMS sites, and web-based applications.",
-    },
-    {
         id:2,
         date:"-2022-",
         title:"Communication Skill",

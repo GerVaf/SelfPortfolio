@@ -47,7 +47,7 @@ const About = () => {
             </h1>
           </div>
 
-          <div className="sm:flex flex flex-col sm:justify-center sm:flex-row sm:flex-wrap gap-10">
+          <div className="sm:flex flex flex-col sm:flex-row sm:flex-wrap gap-10">
             {Data.map((card) => {
               return (
                 <div
