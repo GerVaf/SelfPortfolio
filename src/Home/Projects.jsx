@@ -6,52 +6,45 @@ const Projects = () => {
   return (
     <>
       <div className="p-5 ">
-        <h2 className="sm:text-4xl text-2xl sm:mb-2 text-[#FD940A] font-bold ">-Projects</h2>
+        <h2 className="sm:text-4xl text-2xl sm:mb-2 text-[#FD940A] font-bold ">
+          -Projects
+        </h2>
         <p className="sm:text-2xl text-lg sm:ml-10 ml-5">
           Recent Complete Projects
         </p>
       </div>
-      <div className="p-5 sm:justify-around sm:flex sm:flex-row sm:flex-wrap flex flex-col gap-5 ">
+      <div className="p-5 sm:justify-around sm:flex sm:flex-row sm:flex-wrap flex flex-col items-center gap-5 ">
         {ProjectsDisplay.map((pj) => {
           return (
-            <div className="sm:w-4/5 flex flex-col rounded-lg  bg-slate-100 sm:h-[700px] h-[330px] shadow-lg">
-              <img
-                className="rounded-t-sm object-cover object-top h-2/4"
-                src={pj.img}
-                alt="Album"
-              />
-
-              <div className="card-body flex flex-col justify-around py-3 px-3">
-                <div className=" flex justify-center ">
-                  <h2 className="card-title font-bold sm:text-xl text-[#FD940A]">
-                    {pj.title}
-                  </h2>
-                </div>
+            <div className="shadow-lg bg-gradient-to-r from-gray-400 to-gray-300 sm:w-[70%] sm:h-[40vh] rounded-lg flex flex-col sm:flex-row">
+              <div className=" sm:w-6/12 h-6/12 sm:h-[100%] sm:relative overflow-visible flex items-center">
+                <img
+                  className="sm:rounded-lg rounded-t-lg object-cover object-top sm:absolute w-[100%] z-40 sm:left-[-100px] "
+                  src={pj.img}
+                  alt="Album"
+                />
+              </div>
+              {/* Detail for project  */}
+              <div className=" sm:w-6/12 flex flex-col justify-center sm:gap-10 gap-5 p-5">
+                <h2 className="card-title font-bold sm:text-2xl text-white border-b-2 w-8/12 pb-2">
+                  {pj.title}
+                </h2>
 
                 {/* include */}
-                <div className="h-[50px] sm:h-[100px]">
-                  <div className=" flex gap-5 items-center h-full justify-around">
-                    {pj.language.map((lang) => {
-                      return (
-                        <img
-                          className="sm:w-16 sm:h-16 w-8 h-8"
-                          src={lang.img}
-                          alt=""
-                        />
-                      );
-                    })}
-                  </div>
+                <div className=" flex flex-wrap gap-2 sm:gap-5 items-center sm:justify-around font-bold text-white sm:text-gray-500">
+                  {pj.language.map((lang) => {
+                    return <p>{lang?.title}</p>;
+                  })}
                 </div>
-
-                <hr className="mb-2 border-gray-400" />
+                <hr className="block sm:hidden" />
                 {/* link  */}
-                <div className="flex justify-around sm:text-3xl text-2xl text-black">
-                  <a className="flex justify-center w-1/4 bg-gradient-to-r  from-[#FD940A] to-orange-500 hover:from-[#fdc40a] hover:to-orange-400  rounded-md text-white hover:transition p-2 ">
+                <div className="flex justify-around sm:text-3xl text-2xl ">
+                  <a className="flex justify-center w-1/4 bg-gradient-to-r from-gray-200 to-gray-100  rounded-md text-gray-400 hover:from-[#FD940A] hover:to-[#FF5A1F] transition duration-200 hover:text-white p-2 ">
                     <AiFillGithub />
                   </a>
                   <a
                     href={pj.link}
-                    className="flex justify-center w-1/4  bg-gradient-to-r from-[#FD940A] to-orange-500 hover:from-[#fdc40a] hover:to-orange-400  rounded-md text-white hover:transition p-2 "
+                    className="flex justify-center w-1/4 bg-gradient-to-r from-gray-200 to-gray-100  rounded-md text-gray-400 hover:from-[#FD940A] hover:to-[#FF5A1F] transition duration-200 hover:text-white p-2  "
                   >
                     <BiLink />
                   </a>

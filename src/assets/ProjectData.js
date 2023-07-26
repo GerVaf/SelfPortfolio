@@ -1,48 +1,11 @@
 import image1 from "./img/shoping.png";
 import image2 from "./img/TeamPortfolio.png";
-import image4 from "./img/auth.png";
+import image4 from "./img/shop.png";
 import image5 from "./img/gameplatform.png";
 import image6 from "./img/companyPortfolio.png";
-import react from "./img/React-icon.svg.png";
-import redux from "./img/redux-logo.svg";
-import tailwind from "./img/Tailwind_CSS_Logo.svg.png";
-import daisyui from "./img/logo-4.svg";
-import flowbite from "./img/flowbite-logo.png";
-import framermotion from "./img/framermotion.png";
-import firebase from "./img/firebase.png";
-import axios from "./img/axios.svg";
-import mantine from "./img/mantine.png";
 
 import image3 from "./img/shopping.png";
 export const ProjectsDisplay = [
-  {
-    id: 3,
-    title: "Clothing Site",
-    img: image3,
-    link: "https://order-project-8s69qv41b-gervaf.vercel.app/",
-    language: [
-      {
-        id: 1,
-        img: react,
-      },
-      {
-        id: 2,
-        img: tailwind,
-      },
-      {
-        id: 3,
-        img: daisyui,
-      },
-      {
-        id: 3,
-        img: firebase,
-      },
-      {
-        id: 4,
-        img: framermotion,
-      },
-    ],
-  },
   {
     id: 6,
     title: "Company Portfolio",
@@ -50,14 +13,22 @@ export const ProjectsDisplay = [
     link: "https://company-portfolio-pied.vercel.app/",
     language: [
       {
-        id: 6,
-        img: react,
+        title: 'react'
+      },{
+        title: 'tailwind'
+      },{
+        title: 'framer-motion'
+      },{
+        title: 'react-dom'
+      },{
+        title: 'react-icons'
+      },{
+        title: 'react-router-dom'
+      },{
+        title: 'react-typical'
+      },{
+        title: 'typewriter-effect'
       },
-      {
-        id: 2,
-        img: tailwind,
-      },
-      
     ],
   },
   {
@@ -67,44 +38,77 @@ export const ProjectsDisplay = [
     link: "https://game-platform-tawny.vercel.app/",
     language: [
       {
-        id: 1,
-        img: react,
+        title: 'react'
+      },{
+        title: 'tailwind'
+      },{
+        title: 'react-router-dom'
+      },{
+        title: 'react-fast-marquee'
+      },{
+        title: 'react-icons'
+      },{
+        title: 'react-lazyload'
+      },{
+        title: 'react-redux'
+      },{
+        title: 'redux-persist'
+      },{
+        title: 'react-toastify'
+      },{
+        title: 'swiper'
       },
+    ],
+  },
+  {
+    id: 3,
+    title: "Clothing Site",
+    img: image3,
+    link: "https://order-project-8s69qv41b-gervaf.vercel.app/",
+    language: [
       {
-        id: 2,
-        img: redux,
-      },
-      {
-        id: 3,
-        img: axios,
-      },
-      {
-        id: 4,
-        img: mantine,
-      },
-      {
-        id: 5,
-        img: tailwind,
+        title: 'react'
+      },{
+        title: 'tailwind'
+      },{
+        title: 'mantine-carousel'
+      },{
+        title: 'axios'
+      },{
+        title: 'daisyui'
+      },{
+        title: 'firebase'
+      },{
+        title: 'fontawesome-icon'
+      },{
+        title: 'framer-motion'
+      },{
+        title: 'react-dom'
+      },{
+        title: 'react-fast-marquee'
+      },{
+        title: 'react-hot-toast'
       },
     ],
   },
   {
     id: 4,
-    title: "Authentication",
+    title: "Cosmic site",
     img: image4,
     link: "https://auth-seven-dun.vercel.app/",
     language: [
       {
-        id: 1,
-        img: react,
-      },
-      {
-        id: 2,
-        img: axios,
-      },
-      {
-        id: 3,
-        img: tailwind,
+        title: 'react'
+      },{
+        title: 'react-icons'
+      },{
+        title: 'react-owl-carousel'
+      },{
+        title: 'swiper'
+      },{
+        title: 'react-compare-image'
+      },{
+        title: 'web-vitals'
       },
     ],
   },
@@ -115,16 +119,17 @@ export const ProjectsDisplay = [
     link: "https://shopping-site-alpha.vercel.app/",
     language: [
       {
-        id: 1,
-        img: react,
-      },
-      {
-        id: 2,
-        img: tailwind,
-      },
-      {
-        id: 3,
-        img: daisyui,
+        title: 'react'
+      },{
+        title: 'react-dom'
+      },{
+        title: 'react-icons'
+      },{
+        title: 'react-slick'
+      },{
+        title: 'slick-carousel'
+      },{
+        title: 'swiper'
       },
     ],
   },
@@ -135,16 +140,17 @@ export const ProjectsDisplay = [
     link: "https://team-portfolio-seven.vercel.app/",
     language: [
       {
-        id: 1,
-        img: react,
-      },
-      {
-        id: 2,
-        img: tailwind,
-      },
-      {
-        id: 3,
-        img: daisyui,
+        title: 'react'
+      },{
+        title: 'react-dom'
+      },{
+        title: 'react-icons'
+      },{
+        title: 'flowbite'
+      },{
+        title: 'react-typical'
+      },{
+        title: 'swiper'
       },
     ],
   },
