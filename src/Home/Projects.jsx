@@ -16,7 +16,7 @@ const Projects = () => {
       <div className="p-5 sm:justify-around sm:flex sm:flex-row sm:flex-wrap flex flex-col items-center gap-5 ">
         {ProjectsDisplay.map((pj) => {
           return (
-            <div className="shadow-lg bg-gradient-to-r from-gray-400 to-gray-300 sm:w-[70%] sm:h-[40vh] rounded-lg flex flex-col sm:flex-row">
+            <div className="shadow-lg bg-gradient-to-r from-gray-400 to-gray-300 sm:w-[70%] sm:h-[50vh] rounded-lg flex flex-col sm:flex-row">
               <div className=" sm:w-6/12 h-6/12 sm:h-[100%] sm:relative overflow-visible flex items-center">
                 <img
                   className="sm:rounded-lg rounded-t-lg object-cover object-top sm:absolute w-[100%] z-40 sm:left-[-100px] "
@@ -25,13 +25,13 @@ const Projects = () => {
                 />
               </div>
               {/* Detail for project  */}
-              <div className=" sm:w-6/12 flex flex-col justify-center sm:gap-10 gap-5 p-5">
+              <div className=" sm:w-6/12 flex flex-col justify-around sm:gap-10 p-5">
                 <h2 className="card-title font-bold sm:text-2xl text-white border-b-2 w-8/12 pb-2">
                   {pj.title}
                 </h2>
 
                 {/* include */}
-                <div className=" flex flex-wrap gap-2 sm:gap-5 items-center sm:justify-around font-bold text-white sm:text-gray-500">
+                <div className=" flex flex-wrap h-[50%] gap-2 items-center  font-bold sm:gap-5 text-white sm:text-gray-500">
                   {pj.language.map((lang) => {
                     return <p>{lang?.title}</p>;
                   })}
