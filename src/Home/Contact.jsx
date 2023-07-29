@@ -72,10 +72,10 @@ const Contact = () => {
             forward to the opportunity to work with you.
           </p>
           <div className="sm:flex sm:justify-center sm:items-center">
-            <img src={animation3} className="sm:w-80" alt="" />
+            <img src={animation3} className=" sm:w-64" alt="" />
             {/* information */}
             <div>
-              <div className="ml-5 sm:ml-16 pl-2 sm:text-[20px] mb-5 text-[10px] border-l-2 border-l-[#FD940A]">
+              <div className=" pl-2 sm:text-[20px] mb-5 text-[10px] border-l-2 border-l-[#FD940A]">
                 <p>+95 942 521 2523</p>
                 <p>thantzinmin667@gmail.com</p>
                 <p>Yangon,Tamwe,Myit Thar Nyout</p>
@@ -85,7 +85,6 @@ const Contact = () => {
         </div>
 
         {/* input field  */}
-        {/* ... Your existing input field code ... */}
         <form
           className="sm:w-2/5 flex flex-col justify-center items-center gap-5"
           ref={formRef}

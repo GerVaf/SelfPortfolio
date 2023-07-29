@@ -25,13 +25,13 @@ const Projects = () => {
                 />
               </div>
               {/* Detail for project  */}
-              <div className=" sm:w-6/12 flex flex-col justify-around sm:gap-10 p-5">
+              <div className=" sm:w-7/12 flex flex-col justify-around sm:gap-10 p-5">
                 <h2 className="card-title font-bold sm:text-2xl text-white border-b-2 w-8/12 pb-2">
                   {pj.title}
                 </h2>
 
                 {/* include */}
-                <div className=" flex flex-wrap h-[50%] gap-2 items-center  font-bold sm:gap-5 text-white sm:text-gray-500">
+                <div className=" flex flex-wrap justify-around h-[50%] overflow-visible gap-2 items-center  font-bold  text-white sm:text-gray-500">
                   {pj.language.map((lang) => {
                     return <p>{lang?.title}</p>;
                   })}
