@@ -52,7 +52,7 @@ const Whole = () => {
         <div
           className={`sm:hidden flex flex-col gap-2 fixed ${
             show ? "translate-y-[610px]" : "translate-y-[440px]"
-          } z-20 right-5 items-center trnasition duration-300`}
+          } z-50 right-5 items-center trnasition duration-300`}
         >
           <IoIosArrowUp
             onClick={() => setShow(!show)}

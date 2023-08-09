@@ -31,14 +31,14 @@ const Projects = () => {
                 </h2>
 
                 {/* include */}
-                <div className=" flex flex-wrap justify-around h-[50%] overflow-visible gap-2 items-center  font-bold  text-white sm:text-gray-500">
+                <div className=" flex flex-wrap justify-around h-[50%] overflow-visible gap-2 items-center  font-bold  text-white sm:text-gray-500 mb-3">
                   {pj.language.map((lang) => {
                     return <p>{lang?.title}</p>;
                   })}
                 </div>
                 <hr className="block sm:hidden" />
                 {/* link  */}
-                <div className="flex justify-around sm:text-3xl text-2xl ">
+                <div className="flex mt-3 justify-around sm:text-3xl text-2xl ">
                   <a className="flex justify-center w-1/4 bg-gradient-to-r from-gray-200 to-gray-100  rounded-md text-gray-400 hover:from-[#FD940A] hover:to-[#FF5A1F] transition duration-200 hover:text-white p-2 ">
                     <AiFillGithub />
                   </a>
